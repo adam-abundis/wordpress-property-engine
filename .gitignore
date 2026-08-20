@@ -1,0 +1,24 @@
+# WordPress core is provisioned by Pantheon's upstream, not tracked here.
+# Only our own plugin and theme code is tracked, everything else in web/ is ignored.
+/web/*
+!/web/wp-content/
+/web/wp-content/*
+!/web/wp-content/plugins/
+/web/wp-content/plugins/*
+!/web/wp-content/plugins/property-engine/
+!/web/wp-content/themes/
+/web/wp-content/themes/*
+!/web/wp-content/themes/property-theme/
+
+# Compiled JS is built in CI, never committed (see Issue #16 / deploy.yml)
+**/assets/build/
+
+# Node dependencies, always reinstallable from package.json
+node_modules/
+
+# Phase 1 test artifact, safe to remove once you're sure it's not still tracked
+DEPLOY_TEST.txt
+
+# OS and editor noise
+.DS_Store
+Thumbs.db
