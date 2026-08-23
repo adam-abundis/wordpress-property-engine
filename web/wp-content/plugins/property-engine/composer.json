@@ -1,0 +1,10 @@
+{
+    "name": "adam-abundis/property-engine",
+    "description": "Custom post type, taxonomies, and data fields for real estate listings.",
+    "type": "wordpress-plugin",
+    "autoload": {
+        "psr-4": {
+            "PropertyEngine\\": "src/"
+        }
+    }
+}
