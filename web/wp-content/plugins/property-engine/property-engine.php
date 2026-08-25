@@ -17,3 +17,8 @@ use PropertyEngine\PostTypes\Property;
 
 $property = new Property();
 $property->register();
+
+use PropertyEngine\Taxonomies\Taxonomies;
+
+$taxonomies = new Taxonomies();
+$taxonomies->register();
