@@ -13,4 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-// Feature classes get instantiated here, one line each, as later issues add them.
+use PropertyEngine\PostTypes\Property;
+
+$property = new Property();
+$property->register();
