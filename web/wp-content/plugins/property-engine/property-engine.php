@@ -22,3 +22,8 @@ use PropertyEngine\Taxonomies\Taxonomies;
 
 $taxonomies = new Taxonomies();
 $taxonomies->register();
+
+use PropertyEngine\Fields\ListingFields;
+
+$listing_fields = new ListingFields();
+$listing_fields->register();
