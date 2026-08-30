@@ -7,9 +7,8 @@ class Property {
     add_action( 'init', [ $this, 'register_post_type' ] );
   }
 
-  public function register_post_type() {
-
-      $args = [
+  public function get_args(): array {
+    return [
         'public'          => true,
         'show_in_rest'    => true,
         'supports'        => [ 'title', 'editor', 'thumbnail', 'custom-fields' ],
@@ -19,8 +18,10 @@ class Property {
           'create_posts'  => 'edit_properties',
         ],
         'label'          => 'Properties',
-      ];
+    ];
+  }
 
-      register_post_type( 'property', $args );
+  public function register_post_type() {
+      register_post_type( 'property', $this->get_args() );
   }
 }

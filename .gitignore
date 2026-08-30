@@ -22,3 +22,5 @@ DEPLOY_TEST.txt
 # OS and editor noise
 .DS_Store
 Thumbs.db
+web/wp-content/plugins/property-engine/vendor/
+web/wp-content/plugins/property-engine/.phpunit.result.cache

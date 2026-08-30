@@ -1,21 +1,24 @@
    name: Deploy to Pantheon
- 
+
    on:
      push:
        branches: [main]
- 
+
    permissions:
      contents: read
      deployments: write
      pull-requests: write
- 
+
    jobs:
      deploy:
        runs-on: ubuntu-latest
        steps:
          - name: Check out code
            uses: actions/checkout@v4
- 
+
+         - name: Install PHP dependencies
+           run: composer install --no-dev --working-dir=web/wp-content/plugins/property-engine
+
          - name: Push to Pantheon
            uses: pantheon-systems/push-to-pantheon@0.9.3
            with:
