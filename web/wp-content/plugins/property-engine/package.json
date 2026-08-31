@@ -1,0 +1,25 @@
+{
+  "name": "property-engine",
+  "version": "1.0.0",
+  "description": "Data plugin: CPT, taxonomies, meta fields, seed command.",
+  "private": true,
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "start": "wp-scripts start",
+    "build": "wp-scripts build",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@wordpress/scripts": "^30.0.0",
+    "typescript": "^5.5.0",
+    "@types/wordpress__block-editor": "^11.0.0",
+    "@types/wordpress__data": "^6.0.0",
+    "@types/wordpress__plugins": "^3.0.0"
+  }
+}
