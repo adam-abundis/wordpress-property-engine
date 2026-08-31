@@ -12,7 +12,7 @@ class Property {
         'public'          => true,
         'show_in_rest'    => true,
         'supports'        => [ 'title', 'editor', 'thumbnail', 'custom-fields' ],
-        'capability_type' => 'property',
+        'capability_type' => [ 'property', 'properties' ],
         'map_meta_cap'    => true,
         'capabilities'    => [
           'create_posts'  => 'edit_properties',

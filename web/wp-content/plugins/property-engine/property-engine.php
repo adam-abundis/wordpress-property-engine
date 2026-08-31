@@ -27,3 +27,6 @@ use PropertyEngine\Fields\ListingFields;
 
 $listing_fields = new ListingFields();
 $listing_fields->register();
+
+register_activation_hook( __FILE__, [ \PropertyEngine\Admin\Roles::class, 'activate' ] );
+register_deactivation_hook( __FILE__, [ \PropertyEngine\Admin\Roles::class, 'deactivate' ] );
