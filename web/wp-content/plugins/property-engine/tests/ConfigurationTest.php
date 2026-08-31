@@ -9,7 +9,7 @@ class ConfigurationTest extends TestCase {
 
     public function test_property_uses_custom_capability_type() {
         $args = ( new Property() )->get_args();
-        $this->assertSame( 'property', $args['capability_type'] );
+        $this->assertSame( ['property', 'properties'], $args['capability_type'] );
     }
 
     public function test_property_supports_custom_fields() {
